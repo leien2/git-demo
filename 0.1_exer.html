@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="vue.js"></script>
+  </head>
+  <body>
+    <div id="demo">
+      <ul id="example">
+        <li v-for="(value,name,index) of  items" >
+          {{index}}:{{name}}:{{value}}
+        </li>
+      </ul>  
+    </div>
+    
+    <script>
+      new Vue({
+        el:'#example',
+        data() {
+          return {
+            items:{
+              a:1,
+              b:2,
+              c:3
+            }
+          }
+        },
+      })
+    </script>
+    
+  </body>
+</html>
